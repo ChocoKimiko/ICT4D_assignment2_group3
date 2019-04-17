@@ -1,9 +1,9 @@
+*.iml
+.idea/
+
 # Environments
 .env
 .venv
 env/
 venv/
 ENV/
-
-*.iml
-.idea
