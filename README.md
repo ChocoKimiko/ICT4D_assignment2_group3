@@ -1,4 +1,4 @@
-# ICT4D assignment2 group3
+# ICT4D assignment 2 - group 3
 
 This repository shows that the Django tutorial https://docs.djangoproject.com/en/2.0/intro/ has been completed step by step.
 
