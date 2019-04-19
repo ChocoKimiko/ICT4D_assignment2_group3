@@ -5,7 +5,7 @@ from django.utils import timezone
 from enum import Enum
 
 
-class RegionChoice(Enum):   # A subclass of Enum
+class RegionChoice(Enum):
     Kayes = "Kayes"
     Koulikoro = "Koulikoro"
     Bamako = "Bamako"
@@ -22,7 +22,7 @@ class Farmer(models.Model):
     full_name = models.CharField(max_length=70)
     region = models.CharField(
       max_length=10,
-      choices=[(tag.name, tag.value) for tag in RegionChoice]  # Choices is a list of Tuple
+      choices=[(tag.name, tag.value) for tag in RegionChoice]
     )
     place = models.CharField(max_length=200)
 
@@ -53,3 +53,7 @@ class Advertisement(models.Model):
     was_published_recently.admin_order_field = 'pub_date'
     was_published_recently.boolean = True
     was_published_recently.short_description = 'Published recently?'
+
+# Add new instances through python shell
+# f = Farmer(phone_number="098583850", full_name="Mariam Issa", region=RegionChoice.Mopti, place="Commerce")
+# a = Advertisement(farmer=f, seed ="Maize",seed_type ="Sotubaka", description="", quantity="492", price="340", pub_date=timezone.now())
