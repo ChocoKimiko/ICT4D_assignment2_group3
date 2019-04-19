@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'seeds/style.css' %}" />
+
+<h1>MALI SEED ADVERTISEMENTS</h1>
+
+<h2>{{ advertisements_count }}  advertisements are available</h2>
+<a href="{% url 'seeds_advertisement:advertisements' %}">Go to advertisements list </a>
+
+<h2>{{ farmers_count }} farmers are active</h2>
+<a href="{% url 'seeds_advertisement:farmers' %}">Go to farmers list </a>

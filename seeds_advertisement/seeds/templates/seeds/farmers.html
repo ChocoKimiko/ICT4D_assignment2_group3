@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'seeds/style.css' %}" />
+
+<h2>LIST OF ALL FARMERS</h2>
+
+{% if farmer_list %}
+    <div>
+    {% for farmer in farmer_list %}
+        <div class="background_farmer">
+            <p><b>Name: </b>{{ farmer.full_name }}</p>
+            <p><b>Phone number: </b>{{ farmer.phone_number }}</p>
+            <p><b>Region: </b>{{ farmer.region }}</p>
+            <p><b>Place: </b>{{ farmer.place }}</p>
+           </div>
+    {% endfor %}
+    </div>
+{% else %}
+    <p>There are no farmers available.</p>
+{% endif %}

@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'seeds/style.css' %}" />
+
+<h2>ADVERTISEMENT DETAIL</h2>
+
+<p><b>Seed: </b>{{ advertisement.seed }}</p>
+<p><b>Seed type: </b>{{ advertisement.seed_type }}</p>
+{% if advertisement.description %}
+    <p><b>Description: </b>{{ advertisement.description }}</p>
+{% endif %}
+<p><b>Quantity: </b>{{ advertisement.quantity }} KG</p>
+<p><b>Price: </b>{{ advertisement.price }} CFA/Kg</p>
+<p><b>Farmer: </b>{{ advertisement.farmer }}</p>
+<p><b>Last modified date: </b>{{ advertisement.pub_date }}</p>

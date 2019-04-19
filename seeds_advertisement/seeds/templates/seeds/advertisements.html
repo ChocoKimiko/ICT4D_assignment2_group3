@@ -1,0 +1,14 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'seeds/style.css' %}" />
+
+<h2>LIST OF ALL ADVERTISEMENTS</h2>
+
+{% if advertisement_list %}
+    <div>
+    {% for advertisement in advertisement_list %}
+        <div><a href="{% url 'seeds_advertisement:advertisements' %}{{ advertisement.id }}/">{{ advertisement.seed }} - {{advertisement.seed_type }} ({{advertisement.farmer }})</a></div>
+    {% endfor %}
+    </div>
+{% else %}
+    <p>There are no advertisements available.</p>
+{% endif %}
