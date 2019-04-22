@@ -1,4 +1,4 @@
-# ICT4D assignment 2 - group 3
+# ICT4D assignment 2 midterm: Django setup - group 3
 
 This repository consists of two applications, namely mysite and seeds_advertisement.
 
